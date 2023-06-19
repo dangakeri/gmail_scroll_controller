@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'hive.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -48,6 +50,14 @@ class _HomePageState extends State<HomePage> {
         itemCount: items.length,
         itemBuilder: (context, index) {
           return ListTile(
+            onTap: () {
+              Navigator.push<void>(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => const ContentPage(),
+                ),
+              );
+            },
             // ignore: unnecessary_string_interpolations
             title: Text('${items[index]}'),
           );
@@ -67,7 +77,7 @@ Widget buildExtendedFAB() => FloatingActionButton.extended(
           'Compose',
           style: TextStyle(
             fontSize: 14,
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
       ),
