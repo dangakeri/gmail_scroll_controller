@@ -109,7 +109,7 @@ class _ContentPageState extends State<ContentPage> {
             child: ListTile(
               title: Text(currentItem['name']),
               subtitle: Text(currentItem['quantity'].toString()),
-              trailing: Row(
+              trailing: const Row(
                 children: [],
               ),
             ),
