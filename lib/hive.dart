@@ -22,7 +22,7 @@ class _ContentPageState extends State<ContentPage> {
       }).toList();
       setState(() {
         items = data.reversed.toList();
-        print(items.length);
+        // print(items.length);
         // reversed is for sorting from the latest to the oldest
       });
     }
@@ -37,7 +37,7 @@ class _ContentPageState extends State<ContentPage> {
     Future<void> createItem(Map<String, dynamic> newItem) async {
       await shoppingBox.add(newItem);
       refreshItems();
-      print('amount data is ${shoppingBox.length}');
+      // print('amount data is ${shoppingBox.length}');
     }
 
     // open modal bottom sheet to submit new item
